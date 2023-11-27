@@ -1,9 +1,6 @@
-import java.util.Scanner;
-
+import java.security.PublicKey;
 
 public class MyPerson {
-
-    Scanner scnr = new Scanner(System.in);
 
     // Initialize private fields
     private String firstName = "John";
@@ -26,11 +23,13 @@ public class MyPerson {
     public void setFullName(String name) {
         String fName;
         String lName;
+        int spaceIndex;
         if ((name.indexOf(" ") == name.lastIndexOf(" ")) && name.contains(" ") && !name.isBlank()) {
-            fName = scnr.next(name);
-            lName = scnr.next(name);
+            spaceIndex = name.indexOf(" ");
+            fName = name.substring(0, spaceIndex);
+            lName = name.substring(spaceIndex +1);
             setFirstName(fName);
-            setLLastName(lName);
+            setLastName(lName);
         }
         else {
             if (name.isBlank()) {
@@ -58,7 +57,7 @@ public class MyPerson {
         }
     }
 
-    public void setLLastName(String name) {
+    public void setLastName(String name) {
         if (!name.isEmpty() && !name.contains(" ")) {
             lastName = name;
         }
@@ -66,9 +65,14 @@ public class MyPerson {
             if (name.isEmpty()) {
                 System.out.println("ERROR: Last Name cannot be blank.");
             } else if (name.contains(" ")) {
-                System.out.println("\"ERROR: Last name cannot contain a space.");
+                System.out.println("ERROR: Last name cannot contain a space.");
             }
         }
+    }
+
+    public void setIdNumber() {
+        baseIDNumber++;
+        idNumber = baseIDNumber;
     }
 
     public String getFirstName() {
