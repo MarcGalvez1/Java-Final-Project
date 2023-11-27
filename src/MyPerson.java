@@ -83,4 +83,7 @@ public class MyPerson {
         return lastName;
     }
 
+    public int getIdNumber() {
+        return idNumber;
+    }
 }
