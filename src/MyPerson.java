@@ -11,12 +11,12 @@ public class MyPerson {
     protected static int baseIDNumber = 100000;
 
     public MyPerson() {
-        //idNumber = setIDNumber();
+        setIDNumber();
 
     }
 
     public MyPerson(String fullName) {
-        //idNumber = setIDNumber();
+        setIDNumber();
         setFullName(fullName);
     }
 
@@ -70,7 +70,7 @@ public class MyPerson {
         }
     }
 
-    public void setIdNumber() {
+    public void setIDNumber() {
         baseIDNumber++;
         idNumber = baseIDNumber;
     }

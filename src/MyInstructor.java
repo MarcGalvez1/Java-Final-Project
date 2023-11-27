@@ -3,4 +3,5 @@ public class MyInstructor extends MyPerson{
     private int baseSalary = 20000;
 
 
+
 }
