@@ -22,10 +22,10 @@ public class MyStudent extends MyPerson{
             startYear = year;
         } else {
             if (year < MIN_START_YEAR) {
-                System.out.println("ERROR: Start Year cannot be less than 2010.");
+                System.out.println("ERROR: Start Year cannot be less than " + MIN_START_YEAR + ".");
             }
             if (year > MAX_START_YEAR) {
-                System.out.println("ERROR: Start Year cannot be greater than 2019.");
+                System.out.println("ERROR: Start Year cannot be greater than " + MAX_START_YEAR + ".");
             }
         }
     }
@@ -35,10 +35,12 @@ public class MyStudent extends MyPerson{
             earnedGPA = gpa;
         } else {
             if (gpa < MIN_EARNED_GPA) {
-                System.out.println("ERROR: Earned GPA cannot be less than 0.0.");
+                System.out.print("ERROR: Earned GPA cannot be less than ");
+                System.out.printf("%.1f.\n", MIN_EARNED_GPA);
             }
             if (gpa > MAX_EARNED_GPA) {
-                System.out.println("ERROR: Earned GPA cannot be greater than 4.0.");
+                System.out.println("ERROR: Earned GPA cannot be greater than ");
+                System.out.printf("%.1f.\n", MAX_EARNED_GPA);
             }
         }
     }

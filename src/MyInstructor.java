@@ -25,10 +25,10 @@ public class MyInstructor extends MyPerson{
             this.hiredYear = hiredYear;
         } else {
             if (hiredYear < MIN_HIRED_YEAR) {
-                System.out.println("ERROR: Hired Year cannot be less than 1963.");
+                System.out.println("ERROR: Hired Year cannot be less than " + MIN_HIRED_YEAR + ".");
             }
             if (hiredYear > MAX_HIRED_YEAR) {
-                System.out.println("ERROR: Hired Year cannot be greater than 2019.");
+                System.out.println("ERROR: Hired Year cannot be greater than " + MAX_HIRED_YEAR + ".");
             }
         }
     }
@@ -39,10 +39,12 @@ public class MyInstructor extends MyPerson{
             this.baseSalary = baseSalary;
         }   else {
             if (baseSalary < MIN_BASE_SALARY) {
-                System.out.println("ERROR: Base Salary cannot be less than $0.00.");
+                System.out.print("ERROR: Base Salary cannot be less than $");
+                System.out.printf("%.2f.", MIN_BASE_SALARY);
             }
             if (baseSalary > MAX_BASE_SALARY) {
-                System.out.println("ERROR: Base Salary cannot be greater than $100000.00.");
+                System.out.println("ERROR: Base Salary cannot be greater than $");
+                System.out.printf("%.2f.", MAX_BASE_SALARY);
             }
         }
     }
