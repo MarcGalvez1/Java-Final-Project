@@ -86,4 +86,9 @@ public class MyPerson {
     public int getIdNumber() {
         return idNumber;
     }
+
+    public void printAll() {
+        System.out.println(firstName + " " +lastName + ", " + idNumber);
+    }
+
 }
