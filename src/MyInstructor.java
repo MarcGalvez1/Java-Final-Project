@@ -58,6 +58,7 @@ public class MyInstructor extends MyPerson{
     @Override
     public void printAll() {
         super.printAll();
-        System.out.println("   Year hired: " + hiredYear + ", Salary: $" + baseSalary);
+        System.out.print("   Year hired: " + hiredYear + ", Salary: $");
+        System.out.printf("%.2f\n", baseSalary);
     }
 }
