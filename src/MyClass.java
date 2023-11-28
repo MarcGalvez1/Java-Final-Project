@@ -58,4 +58,47 @@ public class MyClass {
             }
         }
     }
+
+    public void setSectionNumber(String sectNumber) {
+        String rightSectNumber = sectNumber.substring(1);
+        boolean isNumbers = false;
+
+        for (int i = 0; i < 3; i++) {
+            char currNumber = rightSectNumber.charAt(i);
+            if (Character.isDigit(currNumber)) {
+                isNumbers = true;
+            } else {
+                isNumbers = false;
+                break;
+            }
+        }
+        if (sectNumber.charAt(0) == '-' && rightSectNumber.length() == 3 && isNumbers) {
+            sectionNumber = sectNumber;
+        } else {
+            if (sectNumber.charAt(0) != '-') {
+                System.out.println("ERROR: Section Number must start with a dash.");
+            } else if (rightSectNumber.length() != 3) {
+                System.out.println("ERROR: Section numbers must be 3 characters after the dash.");
+            } else if (!isNumbers) {
+                System.out.println("ERROR: Section numbers must be 3 numbers after the dash.");
+            }
+        }
+    }
+
+    public void setCourseInstructor(MyInstructor instructor) {
+        courseInstructor = instructor;
+    }
+
+    public String getCourseName() {
+        return courseName;
+    }
+
+    public String getSectionNumber() {
+        return sectionNumber;
+    }
+
+    public MyInstructor getCourseInstructor() {
+        return courseInstructor;
+    }
+
 }
