@@ -95,21 +95,38 @@ public class MyClass {
 
     public void printMaxGpa() {
         double maxGPA = 0.0;
-        String student;
-        for (MyStudent student: courseList) {
+        String studentName = "";
+        for (MyStudent student : courseList) {
             if (student.getEarnedGPA() > maxGPA) {
                maxGPA = student.getEarnedGPA();
-               student = student.get
+               studentName = student.getFullName();
             }
         }
-        System.out.print(maxGPA);
+        System.out.println("In" + courseName + "-" + sectionNumber + ", " + studentName + " has the highest GPA of " + maxGPA + ".");
     }
 
     public void printMinYear() {
-        int minYear = 2010;
-
+        int minYear = courseList.get(0).getStartYear();
+        String studentName = "";
+        for (MyStudent student : courseList) {
+            if(student.getStartYear() < minYear) {
+                minYear = student.getStartYear();
+                studentName = student.getFullName();
+            }
+        }
+        System.out.println("In" + courseName + "-" + sectionNumber + ", " + studentName + " has earliest start date of " + minYear + ".");
     }
 
+    public void printCourseList() {
+        System.out.println("Course List: ");
+        for (MyStudent student:courseList) {
+            System.out.println(student.getFullName() + " - " + student.getIdNumber());
+        }
+    }
+
+    public void printAll() {
+        System.out.println(courseName + sectionNumber + ", thought by: " + courseInstructor.getFullName());
+    }
     public String getCourseName() {
         return courseName;
     }
