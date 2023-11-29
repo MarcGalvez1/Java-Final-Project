@@ -92,7 +92,7 @@ public class MyPerson {
     }
 
     public void printAll() {
-        System.out.println(firstName + " " +lastName + idNumber);
+        System.out.println(firstName + " " +lastName + " " + idNumber);
     }
 
 }
