@@ -13,6 +13,7 @@ public class MyStudent extends MyPerson{
     }
 
     public MyStudent(String fullName, int startYear, double earnedGPA) {
+        fullName = fullName.trim();
         setFullName(fullName);
         setStartYear(startYear);
         setEarnedGPA(earnedGPA);

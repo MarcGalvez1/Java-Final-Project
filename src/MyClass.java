@@ -12,11 +12,14 @@ public class MyClass {
         sectionNumber = "-001";
     }
     public MyClass(String courseName, String sectionNumber, MyInstructor courseInstructor) {
+        courseName = courseName.trim();
+        sectionNumber = sectionNumber.trim();
         setCourseName(courseName);
         setSectionNumber(sectionNumber);
         setCourseInstructor(courseInstructor);
     }
     public void setCourseName(String crsName) {
+        crsName = crsName.trim();
         String leftCrsName = crsName.substring(0, 3);
         String rightCrsName = crsName.substring(4);
         String formattedCrsName;
@@ -60,6 +63,7 @@ public class MyClass {
     }
 
     public void setSectionNumber(String sectNumber) {
+        sectNumber = sectNumber.trim();
         String rightSectNumber = sectNumber.substring(1);
         boolean isNumbers = false;
 
