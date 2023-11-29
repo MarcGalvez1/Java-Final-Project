@@ -102,7 +102,7 @@ public class MyClass {
                studentName = student.getFullName();
             }
         }
-        System.out.println("In" + courseName + "-" + sectionNumber + ", " + studentName + " has the highest GPA of " + maxGPA + ".");
+        System.out.println("In " + courseName + sectionNumber + ", " + studentName + " has the highest GPA of " + maxGPA + ".");
     }
 
     public void printMinYear() {
@@ -114,7 +114,7 @@ public class MyClass {
                 studentName = student.getFullName();
             }
         }
-        System.out.println("In" + courseName + "-" + sectionNumber + ", " + studentName + " has earliest start date of " + minYear + ".");
+        System.out.println("In " + courseName + sectionNumber + ", " + studentName + " has earliest start date of " + minYear + ".");
     }
 
     public void printCourseList() {
@@ -122,6 +122,8 @@ public class MyClass {
         for (MyStudent student:courseList) {
             System.out.println(student.getFullName() + " - " + student.getIdNumber());
         }
+        System.out.println("There are " + courseList.size() + " students in " + courseName);
+        System.out.println();
     }
 
     public void printAll() {
