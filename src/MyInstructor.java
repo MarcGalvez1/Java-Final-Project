@@ -15,6 +15,7 @@ public class MyInstructor extends MyPerson{
     }
 
     public MyInstructor(String fullName, int hiredYear, double baseSalary) {
+        fullName = fullName.trim();
         setFullName(fullName);
         setHiredYear(hiredYear);
         setBaseSalary(baseSalary);
