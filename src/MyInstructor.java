@@ -1,6 +1,6 @@
 public class MyInstructor extends MyPerson{
-    private int hiredYear = 2000;
-    private double baseSalary = 20000;
+    private int hiredYear;
+    private double baseSalary;
 
     // Constants
     public final int MIN_HIRED_YEAR = 1963;
@@ -10,14 +10,14 @@ public class MyInstructor extends MyPerson{
 
 
     public MyInstructor () {
-        setIDNumber();
+        hiredYear = 2000;
+        baseSalary = 20_000.00;
     }
 
     public MyInstructor(String fullName, int hiredYear, double baseSalary) {
         setFullName(fullName);
         setHiredYear(hiredYear);
         setBaseSalary(baseSalary);
-        setIDNumber();
     }
 
     public void setHiredYear(int hiredYear) {

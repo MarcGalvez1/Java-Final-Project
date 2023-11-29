@@ -1,6 +1,6 @@
 public class MyStudent extends MyPerson{
-    private int startYear = 2018;
-    private  double earnedGPA = 3.0;
+    private int startYear;
+    private  double earnedGPA;
 
     public final  int MIN_START_YEAR = 2010;
     public final int MAX_START_YEAR = 2019;
@@ -8,7 +8,8 @@ public class MyStudent extends MyPerson{
     public final double MIN_EARNED_GPA = 0.0;
     public final double MAX_EARNED_GPA = 4.0;
     public MyStudent() {
-        setIDNumber();
+        startYear = 2018;
+        earnedGPA = 3.0;
     }
 
     public MyStudent(String fullName, int startYear, double earnedGPA) {

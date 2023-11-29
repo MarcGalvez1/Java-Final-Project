@@ -3,21 +3,23 @@ import java.security.PublicKey;
 public class MyPerson {
 
     // Initialize private fields
-    private String firstName = "John";
-    private String lastName = "Doe";
+    private String firstName;
+    private String lastName;
 
-    private int idNumber;
+    private String idNumber;
 
     protected static int baseIDNumber = 100000;
 
     public MyPerson() {
+        firstName = "John";
+        lastName = "Doe";
         setIDNumber();
 
     }
 
     public MyPerson(String fullName) {
-        setIDNumber();
         setFullName(fullName);
+        setIDNumber();
     }
 
     public void setFullName(String name) {
@@ -72,7 +74,8 @@ public class MyPerson {
 
     public void setIDNumber() {
         baseIDNumber++;
-        idNumber = baseIDNumber;
+        idNumber = "T00" + baseIDNumber;
+
     }
 
     public String getFullName () { return firstName + " " + lastName;}
@@ -84,12 +87,12 @@ public class MyPerson {
         return lastName;
     }
 
-    public int getIdNumber() {
+    public String getIdNumber() {
         return idNumber;
     }
 
     public void printAll() {
-        System.out.println(firstName + " " +lastName + ", T00" + idNumber);
+        System.out.println(firstName + " " +lastName + idNumber);
     }
 
 }
