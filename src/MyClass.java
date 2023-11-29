@@ -5,7 +5,7 @@ public class MyClass {
     private String courseName = "CPT 101";
     private String sectionNumber = "-001";
     private MyInstructor courseInstructor;
-    ArrayList<MyStudent> courseList;
+    ArrayList<MyStudent> courseList = new ArrayList<MyStudent>();
 
     public MyClass() {
         courseName = "CPT 101";
@@ -87,6 +87,27 @@ public class MyClass {
 
     public void setCourseInstructor(MyInstructor instructor) {
         courseInstructor = instructor;
+    }
+
+    public void addStudent(MyStudent student) {
+        courseList.add(student);
+    }
+
+    public void printMaxGpa() {
+        double maxGPA = 0.0;
+        String student;
+        for (MyStudent student: courseList) {
+            if (student.getEarnedGPA() > maxGPA) {
+               maxGPA = student.getEarnedGPA();
+               student = student.get
+            }
+        }
+        System.out.print(maxGPA);
+    }
+
+    public void printMinYear() {
+        int minYear = 2010;
+
     }
 
     public String getCourseName() {
