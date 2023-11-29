@@ -18,7 +18,7 @@ public class MyClass {
     }
     public void setCourseName(String crsName) {
         String leftCrsName = crsName.substring(0, 3);
-        String rightCrsName = crsName.substring(4, crsName.length() + 1);
+        String rightCrsName = crsName.substring(4);
         String formattedCrsName;
         boolean isLetters = false;
         boolean isNumbers = false;
