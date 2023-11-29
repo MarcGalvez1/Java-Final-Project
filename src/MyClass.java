@@ -124,7 +124,7 @@ public class MyClass {
     public void printCourseList() {
         System.out.println("Course List: ");
         for (MyStudent student:courseList) {
-            System.out.println(student.getFullName() + " - " + student.getIdNumber());
+            System.out.println(student.getFullName() + " - " + student.getIDNumber());
         }
         System.out.println("There are " + courseList.size() + " students in " + courseName);
         System.out.println();

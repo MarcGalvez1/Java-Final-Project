@@ -90,7 +90,7 @@ public class MyPerson {
         return lastName;
     }
 
-    public String getIdNumber() {
+    public String getIDNumber() {
         return idNumber;
     }
 

@@ -44,6 +44,9 @@ public class Main {
 
         // Code below here to be written by students
 
+        // Test bench variables
+        TestBench test = new TestBench();
+        test.testProject();
         // Variables
         int bCarsonHireYear = 2017;
         double bCarsonBaseSalary = 40_000.00;
@@ -92,7 +95,7 @@ public class Main {
         IST222.printCourseList();
 
         // Display Billy Carson's info
-        System.out.println("The other CIT instructor is " + bCarson.getFullName() + " - " + bCarson.getIdNumber() + " who was hired in " + bCarson.getHiredYear() + ".");
+        System.out.println("The other CIT instructor is " + bCarson.getFullName() + " - " + bCarson.getIDNumber() + " who was hired in " + bCarson.getHiredYear() + ".");
             // Display CPT 234 student with earliest start year
         CPT234.printMinYear();
         // Display IST 222 student with highest GPA
