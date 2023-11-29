@@ -23,6 +23,7 @@ public class MyPerson {
     }
 
     public void setFullName(String name) {
+        name = name.trim();
         String fName;
         String lName;
         int spaceIndex;
@@ -47,6 +48,7 @@ public class MyPerson {
         }
     }
     public void setFirstName(String name) {
+        name = name.trim();
         if (!name.isEmpty() && !name.contains(" ")) {
             firstName = name;
         }
@@ -60,6 +62,7 @@ public class MyPerson {
     }
 
     public void setLastName(String name) {
+        name = name.trim();
         if (!name.isEmpty() && !name.contains(" ")) {
             lastName = name;
         }
