@@ -26,7 +26,7 @@ public class MyClass {
         boolean isLetters = false;
         boolean isNumbers = false;
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < leftCrsName.length(); i++) {
             char currLetter = leftCrsName.charAt(i);
             if (Character.isLetter(currLetter)) {
                 isLetters = true;
@@ -36,7 +36,7 @@ public class MyClass {
             }
         }
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < rightCrsName.length(); i++) {
             char currLetter = rightCrsName.charAt(i);
             if (Character.isDigit(currLetter)) {
                 isNumbers = true;
@@ -47,6 +47,7 @@ public class MyClass {
         }
 
         if (crsName.length() == 7 && isLetters && isNumbers && crsName.charAt(3) ==  ' ') {
+            leftCrsName = leftCrsName.toUpperCase();
             formattedCrsName = leftCrsName + " " + rightCrsName;
             courseName = formattedCrsName;
         } else {
@@ -67,7 +68,7 @@ public class MyClass {
         String rightSectNumber = sectNumber.substring(1);
         boolean isNumbers = false;
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < rightSectNumber.length(); i++) {
             char currNumber = rightSectNumber.charAt(i);
             if (Character.isDigit(currNumber)) {
                 isNumbers = true;
@@ -118,7 +119,7 @@ public class MyClass {
                 studentName = student.getFullName();
             }
         }
-        System.out.println("In " + courseName + sectionNumber + ", " + studentName + " has earliest start date of " + minYear + ".");
+        System.out.println("In " + courseName + sectionNumber + ", " + studentName + " has the earliest start date of " + minYear + ".");
     }
 
     public void printCourseList() {

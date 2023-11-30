@@ -179,6 +179,9 @@ public class TestBench {
         testStudent2.setEarnedGPA(-0.1); // -0.1 < 0.0
         System.out.print("4. ");
         testStudent2.setEarnedGPA(4.1); // 4.1 > 4.0
+
+        System.out.println("There should be 4 errors.");
+
         // Test printAll
         System.out.println("Compare:");
         System.out.println("Marc Galvez, T00100024");
@@ -188,6 +191,82 @@ public class TestBench {
         System.out.println("Tests of 'MyStudent' complete");
         System.out.println("****************************");
 
+        // Test MyClass class
+        System.out.println("Tests of 'MyClass' class");
 
+        //Test default constructor
+        MyClass testClass1 = new MyClass();
+        if (!testClass1.getCourseName().equals("CPT 101"))
+            System.out.println("testClass1.getCourseName failed - returned " + testClass1.getCourseName());
+        if (!testClass1.getSectionNumber().equals("-001"))
+            System.out.println("testClass1.getSectionNumber failed - returned " + testClass1.getSectionNumber());
+
+        // Test of other constructor
+        MyClass testClass2 = new MyClass("IST 256", "-002", testInstructor2);
+        if (!testClass2.getCourseName().equals("IST 256"))
+            System.out.println("testClass2.getCourseName failed - returned " + testClass2.getCourseName());
+        if (!testClass2.getSectionNumber().equals("-002"))
+            System.out.println("testClass2.getSectionNumber failed - returned " + testClass2.getSectionNumber());
+        if (!testClass2.getCourseInstructor().getFullName().equals("Marc Galvez"))
+            System.out.println("testClass2.getCourseInstructor failed - returned " + testClass2.getCourseInstructor().getFullName()); // tests that the course instructor is set correctly
+
+        // Test setCourseName
+        testClass2.setCourseName("  CPT 256"); // No Error
+        testClass2.setCourseName("  cpt 256  "); // No Error caps shouldn't matter
+        System.out.print("1. ");
+        testClass2.setCourseName("  CPT 2567"); // Error > 7 characters
+        System.out.print("2. ");
+        testClass2.setCourseName("Ct 256  "); // Error < 7 character
+        System.out.print("3. ");
+        testClass2.setCourseName(" Cp 2567 "); // Error Must start with 3 characters
+        System.out.print("4. ");
+        testClass2.setCourseName("CPT2 56 "); // Error no space in the 4th character
+        System.out.print("5. ");
+        testClass2.setCourseName("CPT 3A4"); // Must end with 3 numbers
+
+        // Test setSectionNumber
+        testClass2.setSectionNumber("-003"); // No Error
+        System.out.print("6. ");
+        testClass2.setSectionNumber("0003"); // Error must have - at the beginning
+        System.out.print("7. ");
+        testClass2.setSectionNumber("-00"); // Error must have 3 characters after the dash
+        System.out.print("8. ");
+        testClass2.setSectionNumber("-00A"); // Error must have 3 digits after dash
+        System.out.println("There should be 8 errors.");
+
+        // Test print statements
+        MyStudent testStudent3 = new MyStudent("Test One", 2018, 4.0 );
+        MyStudent testStudent4 = new MyStudent("Test Two", 2019, 3.1);
+        MyStudent testStudent5 = new MyStudent("Test Three", 2016, 2.0);
+
+        testClass2.addStudent(testStudent3);
+        testClass2.addStudent(testStudent4);
+        testClass2.addStudent(testStudent5);
+
+        // Test printAll
+        System.out.println("Compare:");
+        System.out.println("CPT 256-001, taught by: Marc Galvez");
+        testClass2.printAll();
+
+        // Test printCourseList
+        System.out.println("Compare:");
+        System.out.println("Test One - T00100025");
+        System.out.println("Test Two - T00100026");
+        System.out.println("Test Three - T00100027");
+        testClass2.printCourseList();
+
+
+        // Test printMinYear
+        System.out.println("Compare:");
+        System.out.println("In CPT 256-003, Test Three has the earliest start date of 2016.");
+        testClass2.printMinYear();
+
+        // Test printMaxGpa
+        System.out.println("Compare:");
+        System.out.println("In CPT 256-003, Test One has the highest GPA of 4.0.");
+        testClass2.printMaxGpa();
+
+        System.out.println("Tests of 'MyStudent' complete");
+        System.out.println("****************************");
     }
 }
