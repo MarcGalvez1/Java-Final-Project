@@ -41,7 +41,7 @@ public class MyStudent extends MyPerson{
                 System.out.printf("%.1f.\n", MIN_EARNED_GPA);
             }
             if (gpa > MAX_EARNED_GPA) {
-                System.out.println("ERROR: Earned GPA cannot be greater than ");
+                System.out.print("ERROR: Earned GPA cannot be greater than ");
                 System.out.printf("%.1f.\n", MAX_EARNED_GPA);
             }
         }

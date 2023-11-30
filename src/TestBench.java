@@ -146,6 +146,48 @@ public class TestBench {
 
         System.out.println("Tests of 'MyInstructor' complete");
         System.out.println("****************************");
-        System.out.println();
+
+        // Test MyStudent class
+        System.out.println("Tests of 'MyStudent' class");
+        // Test the default constructor
+        // Stopped testing things from MyPerson class like name because they work.
+        MyStudent testStudent1 = new MyStudent();
+        if (testStudent1.getStartYear() != 2018) // tests default start year
+            System.out.println("testStudent1.getStartYear failed - returned " + testStudent1.getStartYear());
+        if (testStudent1.getEarnedGPA() != 3.0)
+            System.out.println("testStudent1.getEarnedGPA failed - returned " + testStudent1.getEarnedGPA());
+
+        // Test other constructor
+        MyStudent testStudent2 = new MyStudent("Marc Galvez", 2016, 3.1);
+        if (testStudent2.getStartYear() != 2016)
+            System.out.println("testStudent2.getStartYear failed - returned " + testStudent2.getStartYear());
+        if (testStudent2.getEarnedGPA() != 3.1)
+            System.out.println("testStudent2.getEarnedGPA failed - returned " + testStudent2.getEarnedGPA());
+
+        // Test setStartYear method
+        testStudent2.setStartYear(2019); // No Error checking for inclusivity
+        testStudent2.setStartYear(2010); // No Error checking for inclusivity
+        System.out.print("1. ");
+        testStudent2.setStartYear(2020); // Error startYear > 2019
+        System.out.print("2. ");
+        testStudent2.setStartYear(2009); // Error startYear < 2010
+
+        // Test setEarnedGPA
+        testStudent2.setEarnedGPA(0.0); // No Error checking for inclusivity
+        testStudent2.setEarnedGPA(4.0); // No Error checking for inclusivity
+        System.out.print("3. ");
+        testStudent2.setEarnedGPA(-0.1); // -0.1 < 0.0
+        System.out.print("4. ");
+        testStudent2.setEarnedGPA(4.1); // 4.1 > 4.0
+        // Test printAll
+        System.out.println("Compare:");
+        System.out.println("Marc Galvez, T00100024");
+        System.out.println("   Start Year: 2020, GPA: 4.0");
+        testStudent2.printAll();
+
+        System.out.println("Tests of 'MyStudent' complete");
+        System.out.println("****************************");
+
+
     }
 }
