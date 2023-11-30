@@ -41,11 +41,11 @@ public class MyInstructor extends MyPerson{
         }   else {
             if (baseSalary < MIN_BASE_SALARY) {
                 System.out.print("ERROR: Base Salary cannot be less than $");
-                System.out.printf("%.2f.", MIN_BASE_SALARY);
+                System.out.printf("%.2f.\n", MIN_BASE_SALARY);
             }
             if (baseSalary > MAX_BASE_SALARY) {
-                System.out.println("ERROR: Base Salary cannot be greater than $");
-                System.out.printf("%.2f.", MAX_BASE_SALARY);
+                System.out.print("ERROR: Base Salary cannot be greater than $");
+                System.out.printf("%.2f.\n", MAX_BASE_SALARY);
             }
         }
     }
