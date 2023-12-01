@@ -1,3 +1,13 @@
+/* Marc Galvez
+   November 30, 2023.
+   CPT 236 - Java Programming
+   Final Project
+   This test bench tests the value of all private fields.
+   It also tests all the possible outputs.
+
+   *** The starting point for the Final Project ***
+ */
+
 public class TestBench {
     public void testProject() {
         System.out.println("****************************");
