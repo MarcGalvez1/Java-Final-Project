@@ -53,9 +53,7 @@ public class Main {
 
         // Code below here to be written by students
 
-        // Test bench variables
-        TestBench test = new TestBench();
-        test.testProject();
+
         // Variables
         int bCarsonHireYear = 2017;
         double bCarsonBaseSalary = 40_000.00;
@@ -108,5 +106,9 @@ public class Main {
         CPT234.printMinYear();
         // Display IST 222 student with highest GPA
         IST222.printMaxGpa();
+
+        // Test bench variables
+        TestBench test = new TestBench();
+        test.testProject();
     }
 }
