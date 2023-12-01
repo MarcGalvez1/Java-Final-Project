@@ -1,3 +1,13 @@
+/* Marc Galvez
+   November 30, 2023.
+   CPT 236 - Java Programming
+   Final Project
+   This class is the base class for MyStudent and MyInstructor classes.
+   This class assigns all MyStudent and MyInstructor objects with names and ID numbers
+
+   *** The starting point for the Final Project ***
+ */
+
 import java.security.PublicKey;
 
 public class MyPerson {

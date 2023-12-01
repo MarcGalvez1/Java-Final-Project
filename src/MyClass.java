@@ -4,7 +4,6 @@
    Final Project
    The MyClass class is used to store create classes at tri-county.
    MyClass displays the courseList from an ArrayList.
-   It calls methods from other classes to produce an output.
 
    *** The starting point for the Final Project ***
  */
