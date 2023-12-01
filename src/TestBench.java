@@ -8,6 +8,12 @@
    *** The starting point for the Final Project ***
  */
 
+/**
+ *    This test bench tests the value of all private fields.
+ *    It also tests all the possible outputs.
+ * @author Marc Galvez
+ * @version 1.0
+ */
 public class TestBench {
     public void testProject() {
         System.out.println("****************************");

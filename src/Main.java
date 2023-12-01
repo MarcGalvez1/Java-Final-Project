@@ -10,6 +10,13 @@
 
 import java.util.Scanner;
 
+/**
+ * This is my Java final project.
+ *    The Main class does not take any input from the user.
+ *    It calls methods from other classes to produce an output.
+ * @author Marc Galvez
+ * @version 1.0
+ */
 public class Main {
 
     public static void main(String[] args) {

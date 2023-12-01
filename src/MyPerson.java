@@ -10,6 +10,11 @@
 
 import java.security.PublicKey;
 
+/**
+ * This class creates person objects as a base class for MyInstructor and MyStudent classes.
+ * @author Marc Galvez
+ * @version 1.0
+ */
 public class MyPerson {
 
     // Initialize private fields
@@ -20,6 +25,9 @@ public class MyPerson {
 
     protected static int baseIDNumber = 100000;
 
+    /**
+     *This is the default constructor to initialize private fields.
+     */
     public MyPerson() { // Default constructor to initialize private fields and set IDNumbers for all people
         firstName = "John";
         lastName = "Doe";
@@ -27,11 +35,19 @@ public class MyPerson {
 
     }
 
+    /**
+     * This sets the firstName and lastName private fields by calling fullName method.
+     * @param fullName String argument.
+     */
     public MyPerson(String fullName) { // Other constructor to set full name and ID number
         setFullName(fullName);
         setIDNumber();
     }
 
+    /**
+     * Separate the full name into 2 strings to set firstName and lastName
+     * @param name String argument.
+     */
     public void setFullName(String name) {
         // Separates name into 2 to set first and last name
         // Variables
@@ -60,6 +76,11 @@ public class MyPerson {
 
         }
     }
+
+    /**
+     * sets the firstName private field after validating the name.
+     * @param name String argument.
+     */
     public void setFirstName(String name) { // sets the 1st name
         name = name.trim();
         if (!name.isEmpty() && !name.contains(" ")) { // sets fistName if all conditions passed
@@ -74,6 +95,10 @@ public class MyPerson {
         }
     }
 
+    /**
+     * Sets the lastName privateField after validating the name argument.
+     * @param name String argument.
+     */
     public void setLastName(String name) {
         // Sets lastname
         name = name.trim();
@@ -89,27 +114,50 @@ public class MyPerson {
         }
     }
 
+    /**
+     * Sets the idNumber after incrementing the baseIDNumber
+     */
     public void setIDNumber() { // Sets and increments ID number
         baseIDNumber++;
         idNumber = "T00" + baseIDNumber;
 
     }
 
+    /**
+     * Returns the person object's first and last name
+     * @return String fullName
+     */
     public String getFullName () { // Returns full name
          return firstName + " " + lastName;
     }
+
+    /**
+     * Returns the value of the person object's last name
+     * @return String firstName
+     */
     public String getFirstName() { // returns first name
         return firstName;
     }
 
+    /**
+     * Returns the person object's last name.
+     * @return String lastName
+     */
     public String getLastName() { // returns last name
         return lastName;
     }
 
+    /**
+     * Returns the person object's IDNumber
+     * @return String idNumber
+     */
     public String getIDNumber() { // returns id number
         return idNumber;
     }
 
+    /**
+     * Displays the person object's full name and IDNumber
+     */
     public void printAll() { // displays full name and id number
         System.out.println(firstName + " " + lastName + ", " + idNumber);
     }

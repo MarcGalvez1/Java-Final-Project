@@ -2,13 +2,19 @@
    November 30, 2023.
    CPT 236 - Java Programming
    Final Project
-   The MyClass class is used to store create classes at tri-county.
+   The MyClass class is used to store and create classes at tri-county.
    MyClass displays the courseList from an ArrayList.
 
    *** The starting point for the Final Project ***
  */
 import java.util.ArrayList;
 
+/**
+ *    The MyClass class is used to store and create classes at tri-county.
+ *    MyClass displays the courseList from an ArrayList.
+ * @author Marc Galvez
+ * @version 1.0
+ */
 public class MyClass {
     // Private variables
     private String courseName = "CPT 101";
@@ -16,11 +22,21 @@ public class MyClass {
     private MyInstructor courseInstructor;
     ArrayList<MyStudent> courseList = new ArrayList<>();
 
+    /**
+     * The default constructor initializes the courseName and section number to CPT 101-001
+     */
     public MyClass() {
         // Default constructor to initialize the private variables.
         courseName = "CPT 101";
         sectionNumber = "-001";
     }
+
+    /**
+     * This constructor calls the setter methods to set the courseName, sectionNumber, and courseInstructor private fields.
+     * @param courseName String argument
+     * @param sectionNumber String argument
+     * @param courseInstructor String argument
+     */
     public MyClass(String courseName, String sectionNumber, MyInstructor courseInstructor) {
         // This constructor sets the courseName, sectionNumber, and courseInstructor
         courseName = courseName.trim();
@@ -29,6 +45,16 @@ public class MyClass {
         setSectionNumber(sectionNumber);
         setCourseInstructor(courseInstructor);
     }
+
+    /**
+     * This method validates the courseName inputted to ensure that the courseName is:
+     * 7 characters long,
+     * The 1st 3 characters are letters,
+     * The last 3 characters are numbers,
+     * and that there is a space in the 3rd index
+     * It then ensures that the 1st 3 characters are capitalized.
+     * @param crsName String argument
+     */
     public void setCourseName(String crsName) {
         // Set the variable courseName to equal the crsName argument
         // Variables
@@ -81,6 +107,10 @@ public class MyClass {
         }
     }
 
+    /**
+     * This method ensures the section number has a dash in index 0, has 3 characters after the dash, and that those 3 characters are numbers.
+     * @param sectNumber String input
+     */
     public void setSectionNumber(String sectNumber) {
         // sets the sectionNumber private variable
         // Variables
@@ -114,14 +144,27 @@ public class MyClass {
         }
     }
 
+    /**
+     * This sets the course instructor of the class object.
+     * @param instructor object argument
+     */
     public void setCourseInstructor(MyInstructor instructor) { // Set course instructor no validations
         courseInstructor = instructor;
     }
 
+    /**
+     * This method adds student object to the ArrayList courseList.
+     * @param student object method
+     */
     public void addStudent(MyStudent student)  { // Adds students to the ArrayList
         courseList.add(student);
     }
 
+
+    /**
+     * This method displays the student in the class object who has the highestGPA
+     *
+     */
     public void printMaxGpa() { // displays the student with the highest gpa in the ArrayList
         double maxGPA = 0.0;
         String studentName = "";
@@ -134,6 +177,9 @@ public class MyClass {
         System.out.println("In " + courseName + sectionNumber + ", " + studentName + " has the highest GPA of " + maxGPA + ".");
     }
 
+    /**
+     * This method displays the student who in the clas who started the earliest.
+     */
     public void printMinYear() { // displays the student who started school the earliest
         int minYear = courseList.get(0).getStartYear();
         String studentName = "";
@@ -146,6 +192,10 @@ public class MyClass {
         System.out.println("In " + courseName + sectionNumber + ", " + studentName + " has the earliest start date of " + minYear + ".");
     }
 
+
+    /**
+     * This method displays all the student taking the class.
+     */
     public void printCourseList() { // Displays all students in the class
         System.out.println("Course List: ");
         for (MyStudent student:courseList) {
@@ -156,19 +206,35 @@ public class MyClass {
         System.out.println();
     }
 
+    /**
+     * This method displays the class information like: courseName, sectionNumber, and courseInstructor's full name.
+     */
     public void printAll() { // Displays the specific class and the professor of the class
         System.out.println(courseName + sectionNumber + ", taught by: " + courseInstructor.getFullName());
     }
+
+    /**
+     * this method returns the class object's courseName
+     * @return String courseName
+     */
     public String getCourseName()  { // returns the value of courseName
 
         return courseName;
     }
 
+    /**
+     * this method returns the class object's sectionNumber
+     * @return String sectionNumber
+     */
     public String getSectionNumber()
     { // returns the value of sectionNumber
         return sectionNumber;
     }
 
+    /**
+     * This method returns the class object's courseInstructor.
+     * @return object courseInstructor
+     */
     public MyInstructor getCourseInstructor() { // returns the value of courseInstructor
 
         return courseInstructor;
