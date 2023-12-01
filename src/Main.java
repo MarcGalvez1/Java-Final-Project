@@ -1,7 +1,9 @@
-/* Your name
-   Date
+/* Marc Galvez
+   November 30, 2023
    CPT 236 - Java Programming
    Final Project
+   The Main class does not take any input from the user.
+   It calls methods from other classes to produce an output.
 
    *** The starting point for the Final Project ***
  */
@@ -55,7 +57,6 @@ public class Main {
         //  first name, last name, hire year, and base salary)
         bCarson.setFirstName("Billy");
         bCarson.setLastName("Carson");
-
         bCarson.setHiredYear(bCarsonHireYear);
         bCarson.setBaseSalary(bCarsonBaseSalary);
 
