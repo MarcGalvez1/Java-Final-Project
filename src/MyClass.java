@@ -161,14 +161,17 @@ public class MyClass {
         System.out.println(courseName + sectionNumber + ", taught by: " + courseInstructor.getFullName());
     }
     public String getCourseName()  { // returns the value of courseName
+
         return courseName;
     }
 
-    public String getSectionNumber() { // returns the value of sectionNumber
+    public String getSectionNumber()
+    { // returns the value of sectionNumber
         return sectionNumber;
     }
 
     public MyInstructor getCourseInstructor() { // returns the value of courseInstructor
+
         return courseInstructor;
     }
 
